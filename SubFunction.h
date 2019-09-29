@@ -5,6 +5,7 @@
 //void flip();
 //void PWM();
 void SystemInitialize(void);
+void PressedLastingTime(void);
 void ReadButton_func(void);
-//void LED_Display(void);
+void ValueDisplay(void);
 #endif // !
