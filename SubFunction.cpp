@@ -102,6 +102,7 @@ void PressedLastingTime(){
         ButtonPressed3s = 1;
         ButtonPressed1s = 0;
         SubTimeCounter = 0;
+        HalfASecond = 0;
       }
   else if(TimeButtonPress > THREE_SECOND){
       if((SubTimeCounter % ONE_TENTH_SECOND == 0)&&(SubTimeCounter > 0)){
@@ -146,7 +147,8 @@ void ValueDisplay(){
   case BUTTON1_LOW_INCREASE:
                        if (HalfASecond) {
                               Value++;
-                              Serial.println(Value, DEC);
+                              Serial.print(Value, DEC);
+                              Serial.println("\t\t2222222");
                               }
                         if (fbutton1 == 0){
                               if(fbutton2)NowState = BUTTON2_STEP_DECREASE;
@@ -161,7 +163,8 @@ void ValueDisplay(){
                               }
                         else if (OneTenthSecond) {
                               Value++;
-                              Serial.println(Value, DEC);
+                              Serial.print(Value, DEC);
+                              Serial.println("\t\t3333");
                               }
                         break;
    case BUTTON2_STEP_DECREASE:
